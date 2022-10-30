@@ -5,7 +5,11 @@ The project is written in ASP.NET Core, using docker for hosting.
 
 ## Launching the API
 Download the project by either cloning the repo or download it as a ZIP.
+
 Note: Drone API Endpoint named "Simulate HW Fault" does not function the this time.
+
+Note2: Due to a small brain fart in terms of language terminology, one API has been named "Service".
+Do take note that this API uses the term "Service" in a repair/maintenance scope. Not in a computer science scope. This is consistent throughout the whole code base.
 
 ### Manually/CLI
 1. Navigate to the root folder of the project
