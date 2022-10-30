@@ -6,5 +6,6 @@ services:
     build:
       context: .
       dockerfile: DroneManagement/Dockerfile
-    environment:
-        DB_CONNECTION_STRING: "host=db;port:3000;username=postgres;password=postgres;database=dev"
+    ports:
+        - "3001:80"
+        - "3000:443"

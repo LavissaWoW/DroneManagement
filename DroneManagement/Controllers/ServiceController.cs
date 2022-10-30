@@ -71,13 +71,13 @@ namespace DroneManagement.Controllers
         [ProducesResponseType(typeof(Service), 200)]
         public async Task<IActionResult> Update([FromBody]Service service)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && service.Id != 0)
             {
                 Service newService = _serviceRepository.UpdateService(service);
                 return Ok(newService);
             } else
             {
-                return BadRequest();
+                return BadRequest(service);
             }
         }
 

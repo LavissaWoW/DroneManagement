@@ -73,13 +73,13 @@ namespace DroneManagement.Controllers
         [Route("/api/[controller]/{id}")]
         public async Task<IActionResult> Update([FromBody]Drone drone)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && drone.Id != 0)
             {
                 Drone newDrone = _droneRepository.UpdateDrone(drone);
                 return Ok(newDrone);
             } else
             {
-                return BadRequest();
+                return BadRequest(drone);
             }
         }
 
